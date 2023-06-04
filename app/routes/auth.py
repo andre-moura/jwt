@@ -4,9 +4,9 @@ from app import db
 from app.models import User
 from app.utils.jwt import generate_token, decode_token, token_required
 
-auth_bp = Blueprint('auth', __name__)
+auth = Blueprint('auth', __name__)
 
-@auth_bp.route('/register', methods=['POST'])
+@auth.route('/register', methods=['POST'])
 def register():
     # Get data from the request
     data = request.json
@@ -34,7 +34,7 @@ def register():
     return jsonify({'message': 'User registered successfully'}), 201
 
 
-@auth_bp.route('/login', methods=['POST'])
+@auth.route('/login', methods=['POST'])
 def login():
     # Get data from the request
     data = request.json
@@ -56,7 +56,7 @@ def login():
     return jsonify({'token': token})
 
 
-@auth_bp.route('/protected', methods=['GET'])
+@auth.route('/protected', methods=['GET'])
 @token_required
 def protected(current_user):
     return jsonify({'message': f'Protected endpoint accessed by user: {current_user.username}'}), 200
