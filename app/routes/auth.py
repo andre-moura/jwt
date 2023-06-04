@@ -54,9 +54,3 @@ def login():
     token = generate_token(user.id)
 
     return jsonify({'token': token})
-
-
-@auth.route('/protected', methods=['GET'])
-@token_required
-def protected(current_user):
-    return jsonify({'message': f'Protected endpoint accessed by user: {current_user.username}'}), 200

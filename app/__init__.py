@@ -18,6 +18,8 @@ def create_app():
 
     # Register blueprints/routes here
     from app.routes.auth import auth
-    app.register_blueprint(auth)
+    from app.routes.protected import protected
+    app.register_blueprint(auth, url_prefix='/auth')
+    app.register_blueprint(protected, url_prefix='/protected')
 
     return app
