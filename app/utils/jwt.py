@@ -2,9 +2,12 @@ import jwt
 from functools import wraps
 from flask import request, jsonify, current_app
 from app.models import User
+from datetime import datetime, timedelta
 
 def generate_token(user_id):
-    token_payload = {'user_id': user_id}
+    now = datetime.utcnow()
+    expiration = now + current_app.config['TOKEN_EXPIRATION']
+    token_payload = {'user_id': user_id, 'exp': expiration}
     token = jwt.encode(token_payload, current_app.config['SECRET_KEY'], algorithm='HS256')
     return token
 
