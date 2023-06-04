@@ -30,3 +30,5 @@ Start the application
 ```bash
 flask run
 ```
+
+Open http://127.0.0.1:5000/swagger to view the documentation in your browser.
