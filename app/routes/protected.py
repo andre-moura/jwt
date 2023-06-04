@@ -2,6 +2,7 @@ from flask import Blueprint, jsonify
 from app.utils.jwt import token_required
 from app.models import User
 
+
 protected = Blueprint('protected', __name__)
 
 @protected.route('/greetings', methods=['GET'])

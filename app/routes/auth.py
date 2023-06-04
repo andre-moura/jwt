@@ -4,6 +4,7 @@ from app import db
 from app.models import User
 from app.utils.jwt import generate_token, decode_token, token_required
 
+
 auth = Blueprint('auth', __name__)
 
 @auth.route('/register', methods=['POST'])
