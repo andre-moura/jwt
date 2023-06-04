@@ -1,4 +1,4 @@
-<img src="https://img.shields.io/badge/Python-v3.10.7-blue"/> <img src="https://img.shields.io/badge/Flask-v2.3.2-darkblue"/> <img src="https://img.shields.io/badge/Flask JWT-v0.3.2-%23FC0FC0"/> 
+<img src="https://img.shields.io/badge/Python-v3.10.7-blue"/> <img src="https://img.shields.io/badge/Flask-v2.3.2-darkblue"/> <img src="https://img.shields.io/badge/Flask JWT-v0.3.2-%23FC0FC0"/> <img src="https://img.shields.io/badge/SQLAlchemy-2.0.15-orange"/> 
 
 # JWT
 
