@@ -2,7 +2,7 @@
 
 # JWT
 
-
+<img src="https://github.com/andre-moura/jwt/blob/main/images/jwt-architecture.jpg?raw=true" width="100%"/>
 
 ## How to get started
 
